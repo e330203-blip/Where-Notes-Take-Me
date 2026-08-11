@@ -1,1 +1,70 @@
-
+/* Where Notes Take Me — soft pastel theme */
+:root{
+  --cream:#fbf8f2;--paper:#fffdf9;--sage:#b8c9bd;--sage-dark:#52665c;
+  --lilac:#d9d0df;--peach:#e9c9b9;--gold:#c9a76a;--ink:#303633;
+  --muted:#747b76;--line:#e5dfd5;--shadow:0 18px 50px rgba(62,58,51,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:"Montserrat",sans-serif;line-height:1.7}
+a{color:inherit;text-decoration:none}
+.container{width:min(1120px,calc(100% - 40px));margin-inline:auto}
+.narrow{max-width:720px}.center-text{text-align:center}
+.site-header{position:sticky;top:0;z-index:20;background:rgba(251,248,242,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(229,223,213,.7)}
+.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+.brand{font-family:"Cormorant Garamond",serif;font-size:28px;font-weight:700;letter-spacing:.02em}
+.brand span{color:var(--gold)}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);position:relative;padding:8px 0}
+.nav-links a:hover,.nav-links a.active{color:var(--ink)}
+.nav-links a.active:after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--gold)}
+.menu-toggle{display:none;background:none;border:0;font-size:24px;color:var(--ink)}
+.hero{min-height:650px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:50px}
+.eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:11px;font-weight:600;color:var(--sage-dark);margin-bottom:14px}
+h1,h2,h3{font-family:"Cormorant Garamond",serif;line-height:1.08;font-weight:600}
+h1{font-size:clamp(52px,7vw,88px);letter-spacing:-.025em}
+h1 em,h2 em{font-style:italic;color:var(--sage-dark)}
+.hero-text{max-width:600px;color:var(--muted);font-size:15px;margin:26px 0 32px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.button{display:inline-flex;align-items:center;justify-content:center;border:1px solid transparent;padding:12px 20px;border-radius:999px;font:600 12px "Montserrat",sans-serif;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
+.button-primary{background:var(--sage-dark);color:white}
+.button-primary:hover{background:#42544b}
+.button-ghost{border-color:var(--line);background:var(--paper)}
+.button-ghost:hover{border-color:var(--sage)}
+.small-button{padding:9px 15px;font-size:10px;background:var(--paper);border-color:var(--line)}
+.hero-art{height:500px;position:relative;display:grid;place-items:center}
+.sun{width:310px;height:310px;border-radius:50%;background:var(--lilac);opacity:.65}
+.music-orbit{position:absolute;border:1px solid rgba(82,102,92,.2);border-radius:50%}
+.orbit-one{width:420px;height:260px;transform:rotate(-18deg)}
+.orbit-two{width:320px;height:440px;transform:rotate(32deg)}
+.kalimba-shape{position:absolute;width:230px;height:245px;background:#ad8a63;border-radius:45% 45% 32% 32% / 30% 30% 70% 70%;box-shadow:var(--shadow);overflow:hidden;transform:rotate(-2deg)}
+.kalimba-top{position:absolute;left:22px;right:22px;top:22px;height:62px;background:#c6a078;border-radius:50% 50% 12px 12px}
+.tine{position:absolute;top:40px;width:7px;background:#d9c7a5;border-radius:5px;box-shadow:0 1px 2px rgba(0,0,0,.18)}
+.t1{left:43px;height:104px}.t2{left:61px;height:120px}.t3{left:79px;height:136px}.t4{left:97px;height:150px}.t5{left:115px;height:158px}.t6{left:133px;height:150px}.t7{left:151px;height:136px}.t8{left:169px;height:120px}.t9{left:187px;height:104px}
+.sound-hole{position:absolute;left:50%;bottom:45px;transform:translateX(-50%);width:38px;height:38px;border-radius:50%;background:#6f523b}
+.intro-section{padding:110px 0;background:var(--paper);border-block:1px solid var(--line)}
+.intro-section h2{font-size:54px;margin-bottom:18px}.intro-section p:not(.eyebrow){color:var(--muted);font-size:15px}
+.feature-section{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:90px 0}
+.feature-card{min-height:280px;padding:32px;background:var(--paper);border:1px solid var(--line);position:relative;transition:.25s;box-shadow:0 4px 20px rgba(62,58,51,.025)}
+.feature-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.feature-card.featured{background:#e7ede8}
+.card-number,.note-index{font-size:11px;letter-spacing:.12em;color:var(--gold)}
+.feature-card h3{font-size:40px;margin-top:52px}.feature-card p{color:var(--muted);font-size:14px;margin-top:10px}.arrow{position:absolute;right:30px;bottom:28px;font-size:24px}
+.site-footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:11px;letter-spacing:.06em}
+.footer-inner{display:flex;justify-content:space-between;gap:20px}
+.page-hero{padding:110px 0 80px;max-width:850px}.page-hero h1{font-size:clamp(52px,7vw,76px)}.page-hero>p:last-child{max-width:650px;color:var(--muted);margin-top:20px}
+.content-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:24px;padding-bottom:90px}
+.paper-card,.quote-card{padding:45px;background:var(--paper);border:1px solid var(--line);box-shadow:var(--shadow)}
+.paper-card h2{font-size:50px;margin-bottom:20px}.paper-card p:not(.eyebrow){color:var(--muted);font-size:15px;margin-top:15px}
+.quote-card{background:var(--sage);display:flex;flex-direction:column;justify-content:center}.quote-mark{font:70px "Cormorant Garamond";line-height:.6;color:rgba(48,54,51,.25)}.quote-card p{font:italic 28px "Cormorant Garamond";line-height:1.3;margin:20px 0}.quote-line{width:35px;height:1px;background:var(--sage-dark);margin-bottom:10px}.quote-card small{text-transform:uppercase;letter-spacing:.12em;font-size:9px}
+.values-section{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);margin-bottom:100px}.values-section>div{background:var(--cream);padding:35px}.values-section span{color:var(--gold);font-size:11px}.values-section h3{font-size:36px;margin:35px 0 8px}.values-section p{font-size:13px;color:var(--muted)}
+.posts{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;padding-bottom:100px}.post-card{background:var(--paper);border:1px solid var(--line);overflow:hidden}.post-large{grid-column:span 2;display:grid;grid-template-columns:1fr 1fr}.post-visual{min-height:220px;display:grid;place-items:center}.post-visual span{font:90px "Cormorant Garamond";opacity:.5}.visual-sage{background:#dce6df}.visual-peach{background:#f0dbd0}.visual-lilac{background:#e6dfea}.visual-cream{background:#f1ead9}.post-body{padding:30px}.tag{font-size:10px;text-transform:uppercase;letter-spacing:.13em;color:var(--sage-dark)}.post-body h2{font-size:38px;margin:12px 0}.post-body p{font-size:13px;color:var(--muted);margin-bottom:20px}.text-link{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.1em}
+.notes-list{padding-bottom:45px}.note-row{display:grid;grid-template-columns:60px 1fr auto;align-items:center;gap:25px;padding:30px 0;border-top:1px solid var(--line)}.note-row h2{font-size:38px;margin:5px 0}.note-row p{font-size:13px;color:var(--muted)}.note-meta{display:flex;align-items:center;gap:18px}.note-meta>span{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}.note-tip{padding:25px 30px;background:#e7ede8;border:1px solid #d5e0d8;margin-bottom:100px;display:flex;gap:20px;align-items:baseline}.note-tip strong{font-family:"Cormorant Garamond";font-size:24px}.note-tip p{font-size:13px;color:var(--muted)}
+.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;padding-bottom:100px}.contact-copy h2{font-size:52px}.contact-copy>p{color:var(--muted);font-size:14px;margin:15px 0 35px}.contact-detail{display:flex;gap:15px;margin-top:22px}.contact-detail>span{width:35px;height:35px;border-radius:50%;background:var(--lilac);display:grid;place-items:center}.contact-detail strong{font-size:11px;text-transform:uppercase;letter-spacing:.1em}.contact-detail p{font-size:13px;color:var(--muted)}.contact-form{background:var(--paper);border:1px solid var(--line);padding:38px;box-shadow:var(--shadow)}label{display:block;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;margin-bottom:7px}input,textarea{width:100%;border:1px solid var(--line);background:var(--cream);padding:13px 14px;font:13px "Montserrat";color:var(--ink);outline:none;margin-bottom:20px}input:focus,textarea:focus{border-color:var(--sage-dark)}textarea{resize:vertical}.form-note{font-size:10px;color:var(--muted);margin-top:12px}
+@media(max-width:800px){
+  .nav{min-height:68px}.menu-toggle{display:block}.nav-links{display:none;position:absolute;top:68px;left:0;right:0;background:var(--cream);padding:15px 20px 25px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}.nav-links.open{display:flex}
+  .hero{grid-template-columns:1fr;padding:65px 0}.hero-art{height:360px}.feature-section,.values-section{grid-template-columns:1fr}.content-grid,.contact-grid{grid-template-columns:1fr}.posts{grid-template-columns:1fr}.post-large{grid-column:auto;display:block}.note-row{grid-template-columns:42px 1fr}.note-meta{grid-column:2;justify-content:space-between}.footer-inner{flex-direction:column}.page-hero{padding:75px 0 55px}
+}
+@media(max-width:500px){
+  .container{width:min(100% - 28px,1120px)}h1{font-size:52px}.intro-section h2{font-size:43px}.feature-card{min-height:240px}.paper-card,.quote-card,.contact-form{padding:28px}.post-body h2,.note-row h2{font-size:32px}.hero-art{transform:scale(.82);margin:-20px 0}
+}

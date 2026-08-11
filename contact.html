@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Where Notes Take Me</title>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Where Notes Take Me</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- Visible website content goes here -->
-
-</body>
-</html>
+<header class="site-header"><nav class="nav container"><a class="brand" href="index.html">Where Notes Take Me<span>.</span></a><button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button><div class="nav-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="blog.html">Blog</a><a href="notes.html">Notes</a><a class="active" href="contact.html">Contact</a></div></nav></header>
+<main>
+<section class="page-hero container"><p class="eyebrow">Let's talk</p><h1>Have a note to <em>share?</em></h1><p>Questions, suggestions, song recommendations or simply a hello — I'd love to hear from you.</p></section>
+<section class="contact-grid container">
+  <div class="contact-copy"><h2>Send a message.</h2><p>If you'd like to get in touch about the website, kalimba, a song or anything music-related, use the form.</p><div class="contact-detail"><span>✦</span><div><strong>Email</strong><p>hello@example.com</p></div></div><div class="contact-detail"><span>♪</span><div><strong>Music</strong><p>Kalimba, melodies &amp; learning</p></div></div></div>
+  <form class="contact-form" action="#" method="post"><label for="name">Name</label><input id="name" name="name" type="text" placeholder="Your name" required><label for="email">Email</label><input id="email" name="email" type="email" placeholder="you@example.com" required><label for="message">Message</label><textarea id="message" name="message" rows="6" placeholder="Write your message..." required></textarea><button class="button button-primary" type="submit">Send message</button><p class="form-note">This is the front-end form. Connect it to a form service or backend to receive submissions.</p></form>
+</section>
+</main>
+<footer class="site-footer"><div class="container footer-inner"><p>Where Notes Take Me.</p><p>Made with patience, curiosity &amp; music.</p></div></footer>
+<script src="script.js"></script>
+</body></html>
