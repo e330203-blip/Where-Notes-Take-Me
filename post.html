@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Post | Where Notes Take Me</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header"><nav class="nav container">
+<a class="brand" href="index.html">Where Notes Take Me<span>.</span></a>
+<button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+<div class="nav-links"><a href="index.html">Home</a><a href="about.html">About</a><a class="active" href="blog.html">Blog</a><a href="notes.html">Notes</a><a href="contact.html">Contact</a></div>
+</nav></header>
+
+<main id="post-page">
+  <section class="post-header container" id="post-header"></section>
+  <article class="article container" id="article-content"></article>
+  <div class="container article-back"><a class="button button-ghost" href="blog.html">← Back to blog</a></div>
+</main>
+
+<footer class="site-footer"><div class="container footer-inner"><p>Where Notes Take Me.</p><p>Made with patience, curiosity &amp; music.</p></div></footer>
+<script src="blog-data.js"></script><script src="script.js"></script>
+<script>
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+const post = BLOG_POSTS.find(item => item.id === id) || BLOG_POSTS[0];
+
+document.title = `${post.title} | Where Notes Take Me`;
+
+document.getElementById("post-header").innerHTML = `
+  <span class="tag">${post.category}</span>
+  <h1>${post.title}</h1>
+  <p class="article-meta">${post.date} · ${post.readTime}</p>
+  <div class="post-visual ${post.visual} article-visual"><span>${post.symbol}</span></div>
+`;
+
+document.getElementById("article-content").innerHTML = post.content.map(block => {
+  if (block.type === "lead") return `<p class="article-lead">${block.text}</p>`;
+  if (block.type === "heading") return `<h2>${block.text}</h2>`;
+  if (block.type === "quote") return `<blockquote>${block.text}</blockquote>`;
+  return `<p>${block.text}</p>`;
+}).join("");
+</script>
+</body>
+</html>

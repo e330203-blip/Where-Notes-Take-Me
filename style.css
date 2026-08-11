@@ -68,3 +68,17 @@ h1 em,h2 em{font-style:italic;color:var(--sage-dark)}
 @media(max-width:500px){
   .container{width:min(100% - 28px,1120px)}h1{font-size:52px}.intro-section h2{font-size:43px}.feature-card{min-height:240px}.paper-card,.quote-card,.contact-form{padding:28px}.post-body h2,.note-row h2{font-size:32px}.hero-art{transform:scale(.82);margin:-20px 0}
 }
+
+/* Blog system additions */
+.post-meta{font-size:10px;color:var(--muted);letter-spacing:.05em;margin-bottom:18px}
+.post-header{padding:90px 0 35px;max-width:900px}
+.post-header h1{font-size:clamp(50px,7vw,78px);max-width:850px;margin:10px 0}
+.article-meta{font-size:11px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.article-visual{margin-top:45px;min-height:280px}
+.article{max-width:760px;padding:25px 0 45px}
+.article p{font-size:16px;color:var(--muted);margin:0 0 24px}
+.article .article-lead{font:italic 27px/1.45 "Cormorant Garamond",serif;color:var(--ink);margin-bottom:40px}
+.article h2{font-size:42px;margin:42px 0 15px}
+.article blockquote{border-left:2px solid var(--gold);padding:15px 25px;margin:35px 0;font:italic 28px/1.35 "Cormorant Garamond",serif;background:rgba(216,207,222,.25)}
+.article-back{padding-bottom:90px}
+@media(max-width:800px){.post-header{padding-top:65px}.article p{font-size:15px}.article h2{font-size:36px}.article .article-lead{font-size:24px}}
